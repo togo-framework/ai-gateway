@@ -127,7 +127,7 @@ type UsageRecord struct {
 }
 
 func init() {
-	togo.RegisterProviderFunc("ai-gateway", togo.PriorityService, func(k *togo.Kernel) error {
+	togo.RegisterProviderFunc("ai-gateway", togo.PriorityLate+10, func(k *togo.Kernel) error {
 		g := New()
 		g.k = k
 		k.Set("ai-gateway", g)

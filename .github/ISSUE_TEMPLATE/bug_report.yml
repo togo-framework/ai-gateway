@@ -1,0 +1,14 @@
+name: Bug report
+description: Report a problem with the togo flags plugin
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes: { label: What happened?, description: A clear description + steps to reproduce (include your flag key). }
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes: { label: scheduler / togo version }
+  - type: textarea
+    id: env
+    attributes: { label: Environment, description: OS, Go version, queue driver. }
